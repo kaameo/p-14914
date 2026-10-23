@@ -2,6 +2,7 @@ package com.back.ai.controller;
 
 import com.back.ai.service.ChatService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -14,7 +15,7 @@ public class AiController {
     @Autowired
     private ChatService chatService;
 
-    @GetMapping
+    @GetMapping(produces = MediaType.TEXT_EVENT_STREAM_VALUE)
     public Flux<String> streamChat(@RequestParam String message) {
         return chatService.streamChatResponse(message);
     }

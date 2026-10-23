@@ -20,12 +20,13 @@ repositories {
 }
 
 dependencies {
-    implementation("org.springframework.boot:spring-boot-starter-webmvc")
+//    implementation("org.springframework.boot:spring-boot-starter-webmvc")
     implementation("org.springframework.ai:spring-ai-starter-model-ollama")
     implementation("org.springframework.ai:spring-ai-starter-model-openai")
     implementation("org.springframework.boot:spring-boot-starter-webflux")
     developmentOnly("org.springframework.boot:spring-boot-devtools")
-    testImplementation("org.springframework.boot:spring-boot-starter-webmvc-test")
+//    testImplementation("org.springframework.boot:spring-boot-starter-webmvc-test")
+    testImplementation("org.springframework.boot:spring-boot-starter-webflux-test")
     testImplementation("org.springframework.boot:spring-boot-webtestclient")
     testRuntimeOnly("org.junit.platform:junit-platform-launcher")
 }
