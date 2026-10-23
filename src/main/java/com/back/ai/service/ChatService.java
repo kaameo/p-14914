@@ -12,7 +12,7 @@ public class ChatService {
     @Autowired
     private ChatClient chatClient;
 
-    public Flux<String> streamChatResponse(String userMessage){
+    public Flux<String> streamChatResponse(String userMessage) {
         Message message = UserMessage.builder().text(userMessage).build();
         return chatClient.prompt().messages(message).stream().content();
     }

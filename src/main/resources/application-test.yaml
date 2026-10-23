@@ -10,4 +10,4 @@ spring:
   ai:
     ollama:
       chat:
-        model: qwen2.5:1.5b  # 작업 2에서 pull받은 모델명으로 설정
+        model: llama3:latest  # 작업 2에서 pull받은 모델명으로 설정
